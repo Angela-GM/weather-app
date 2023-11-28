@@ -18,7 +18,7 @@ export class ClimatesController {
     return climates;
   }
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.climatesService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    return this.climatesService.findOneById(id);
   }
 }

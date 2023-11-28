@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Climate } from './entities/climate.entity';
 import { Repository } from 'typeorm';
@@ -20,7 +20,15 @@ export class ClimatesService {
     }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} climate`;
+  async findOneById(id: number): Promise<Climate> {
+    const climate = await this.climateRepository.findOne({
+      where: { id },
+    });
+
+    if (!climate) {
+      throw new NotFoundException('Climate not found');
+    }
+
+    return climate;
   }
 }
