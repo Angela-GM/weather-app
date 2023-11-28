@@ -16,7 +16,10 @@ export class CitiesController {
   async findAll(): Promise<City[]> {
     return this.cityService.findAll();
   }
-
+  @ApiOperation({
+    summary: 'Get city for id',
+    description: 'Retrieve a city with id coordinates',
+  })
   @Get(':id')
   async findOne(@Param('id') id: number) {
     return this.cityService.findOneById(id);
