@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CitiesModule } from './cities/cities.module';
 import { ClimatesModule } from './climates/climates.module';
+import { ForecastsModule } from './forecasts/forecasts.module';
 import databaseConfig from './config/database.config';
 
 @Module({
@@ -20,6 +21,7 @@ import databaseConfig from './config/database.config';
     }),
     CitiesModule,
     ClimatesModule,
+    ForecastsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

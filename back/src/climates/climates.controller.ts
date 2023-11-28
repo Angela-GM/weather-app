@@ -17,6 +17,11 @@ export class ClimatesController {
     const climates = await this.climatesService.findAll();
     return climates;
   }
+
+  @ApiOperation({
+    summary: 'Get climate for id',
+    description: 'Retrieve weather information by id',
+  })
   @Get(':id')
   findOne(@Param('id') id: number) {
     return this.climatesService.findOneById(id);
