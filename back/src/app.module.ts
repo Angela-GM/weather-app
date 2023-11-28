@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CityModule } from './city/city.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CitiesModule } from './cities/cities.module';
 import databaseConfig from './config/database.config';
 
 @Module({
@@ -17,7 +17,7 @@ import databaseConfig from './config/database.config';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => configService.get('db'),
     }),
-    CityModule,
+    CitiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
