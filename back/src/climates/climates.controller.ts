@@ -1,34 +1,24 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { ClimatesService } from './climates.service';
-import { CreateClimateDto } from './dto/create-climate.dto';
-import { UpdateClimateDto } from './dto/update-climate.dto';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { Climate } from './entities/climate.entity';
 
 @Controller('climates')
+@ApiTags('climates')
 export class ClimatesController {
-  constructor(private readonly climatesService: ClimatesService) {}
-
-  @Post()
-  create(@Body() createClimateDto: CreateClimateDto) {
-    return this.climatesService.create(createClimateDto);
-  }
+  constructor(private readonly climateService: ClimatesService) {}
 
   @Get()
-  findAll() {
-    return this.climatesService.findAll();
+  @ApiOperation({
+    summary: 'Get all climates',
+    description: 'Retrieve a list of all climates with information',
+  })
+  async findAll(): Promise<Climate[]> {
+    return this.climateService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.climatesService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateClimateDto: UpdateClimateDto) {
-    return this.climatesService.update(+id, updateClimateDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.climatesService.remove(+id);
+    return this.climateService.findOne(+id);
   }
 }

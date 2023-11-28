@@ -1,5 +1,11 @@
 import { City } from 'src/cities/entities/city.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity({ name: 'climates' })
 export class Climate {
@@ -22,5 +28,6 @@ export class Climate {
   rain_fall: string;
 
   @ManyToOne(() => City, (city) => city.climates)
+  @JoinColumn({ name: 'city_id' })
   city: City;
 }

@@ -1,26 +1,26 @@
 import { Injectable } from '@nestjs/common';
-import { CreateClimateDto } from './dto/create-climate.dto';
-import { UpdateClimateDto } from './dto/update-climate.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Climate } from './entities/climate.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class ClimatesService {
-  create(createClimateDto: CreateClimateDto) {
-    return 'This action adds a new climate';
-  }
+  constructor(
+    @InjectRepository(Climate)
+    private climateRepository: Repository<Climate>,
+  ) {}
 
-  findAll() {
-    return `This action returns all climates`;
+  async findAll(): Promise<Climate[]> {
+    try {
+      const climates = await this.climateRepository.find();
+      return climates;
+    } catch (error) {
+      console.log(`Error retrieving climates: ${error.message}`, error.stack);
+      throw error;
+    }
   }
 
   findOne(id: number) {
     return `This action returns a #${id} climate`;
-  }
-
-  update(id: number, updateClimateDto: UpdateClimateDto) {
-    return `This action updates a #${id} climate`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} climate`;
   }
 }

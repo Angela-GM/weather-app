@@ -16,6 +16,7 @@ export class CitiesController {
   async findAll(): Promise<City[]> {
     return this.cityService.findAll();
   }
+
   @ApiOperation({
     summary: 'Get city for id',
     description: 'Retrieve a city with id coordinates',

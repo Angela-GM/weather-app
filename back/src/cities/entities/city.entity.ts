@@ -15,6 +15,6 @@ export class City {
   @Column()
   lon: string;
 
-  @OneToMany(() => Climate, (climate) => climate.city_id)
+  @OneToMany(() => Climate, (climate) => climate.city)
   climates: Climate[];
 }
