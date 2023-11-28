@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Climate } from 'src/climates/entities/climate.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'cities' })
 export class City {
@@ -13,4 +14,7 @@ export class City {
 
   @Column()
   lon: string;
+
+  @OneToMany(() => Climate, (climate) => climate.city_id)
+  climates: Climate[];
 }
