@@ -27,7 +27,7 @@ export class Climate {
   @Column()
   rain_fall: string;
 
-  @ManyToOne(() => City, (city) => city.climates)
+  @ManyToOne(() => City, (city) => city.climates, { eager: true })
   @JoinColumn({ name: 'city_id' })
   city: City;
 }

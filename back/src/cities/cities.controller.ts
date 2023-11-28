@@ -6,7 +6,7 @@ import { City } from './entities/city.entity';
 @Controller('cities')
 @ApiTags('cities')
 export class CitiesController {
-  constructor(private readonly cityService: CitiesService) {}
+  constructor(private readonly citiesService: CitiesService) {}
 
   @Get()
   @ApiOperation({
@@ -14,7 +14,7 @@ export class CitiesController {
     description: 'Retrieve a list of all cities with coordinates',
   })
   async findAll(): Promise<City[]> {
-    return this.cityService.findAll();
+    return this.citiesService.findAll();
   }
 
   @ApiOperation({
@@ -23,6 +23,6 @@ export class CitiesController {
   })
   @Get(':id')
   async findOne(@Param('id') id: number) {
-    return this.cityService.findOneById(id);
+    return this.citiesService.findOneById(id);
   }
 }

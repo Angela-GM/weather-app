@@ -6,7 +6,7 @@ import { Climate } from './entities/climate.entity';
 @Controller('climates')
 @ApiTags('climates')
 export class ClimatesController {
-  constructor(private readonly climateService: ClimatesService) {}
+  constructor(private readonly climatesService: ClimatesService) {}
 
   @Get()
   @ApiOperation({
@@ -14,11 +14,11 @@ export class ClimatesController {
     description: 'Retrieve a list of all climates with information',
   })
   async findAll(): Promise<Climate[]> {
-    return this.climateService.findAll();
+    const climates = await this.climatesService.findAll();
+    return climates;
   }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.climateService.findOne(+id);
+    return this.climatesService.findOne(+id);
   }
 }
