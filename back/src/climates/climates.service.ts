@@ -31,4 +31,14 @@ export class ClimatesService {
 
     return climate;
   }
+
+  async findByCity(city_id: number): Promise<Climate[]> {
+    const query = `
+    SELECT * FROM climates
+    WHERE city_id = ?
+  `;
+
+    const climates = await this.climateRepository.query(query, [city_id]);
+    return climates;
+  }
 }
