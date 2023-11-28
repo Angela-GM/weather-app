@@ -31,4 +31,14 @@ export class ForecastsService {
 
     return forecast;
   }
+
+  async findByCity(city_id: number): Promise<Forecast[]> {
+    const query = `
+    SELECT * FROM forecasts
+    WHERE city_id = ?
+  `;
+
+    const climates = await this.forecastRepository.query(query, [city_id]);
+    return climates;
+  }
 }
