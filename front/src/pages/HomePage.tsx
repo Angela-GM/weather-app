@@ -9,6 +9,8 @@ export const HomePage = () => {
     <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500">
       <SearchComponent placeholder="Search city..." />
 
+      {/* Cards */}
+
       <div className="flex gap-6 flex-wrap">
         <div className="w-3/4 md:w-3/6 m-auto rounded-lg p-5 border border-white/5 shadow-lg hover:border-white/50 cursor-pointer">
           <h2 className="text-lg">Barcelona</h2>
@@ -49,6 +51,10 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
+      {/* fin cards */}
+
+
+
     </div>
   );
 };
