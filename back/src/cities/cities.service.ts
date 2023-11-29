@@ -11,6 +11,7 @@ export class CitiesService {
   ) {}
 
   async findAll(): Promise<City[]> {
+    console.log('Calling findAll in service');
     try {
       const cities = await this.cityRepository.find();
       return cities;
