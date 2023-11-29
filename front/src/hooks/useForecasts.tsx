@@ -25,11 +25,17 @@ export const useForecasts = () => {
     const forecastsAllQuery = useQuery(
         ['forecasts'],
         getForescastsAll,
+        {
+            refetchOnWindowFocus: false,
+        }
     )
 
     const forecastsTodayQuery = useQuery(
         ['forecasts_today'],
         getForecastsToday,
+        {
+            refetchOnWindowFocus: false,
+        }
     )
 
     

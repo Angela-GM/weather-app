@@ -7,7 +7,7 @@ export type { Forecast, City } from "./interfaces/weatherInterfaces"
 // Components
 export { Header } from "./components/Header";
 export { SearchComponent } from "./components/SearchComponent";
-export { Card } from "./components/Card";
+export { Card } from "./components/Card/Card";
 
 // Pages
 export { HomePage } from "./pages/HomePage";

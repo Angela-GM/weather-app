@@ -1,12 +1,11 @@
 import { WiThermometer } from "react-icons/wi";
-import MostlyCloudySVG from "../../public/images/overcast.svg";
-import { useForecasts } from "../hooks/useForecasts";
+import { useForecasts } from "../../hooks/useForecasts";
+import weatherIcons from "./getWeatherIcon";
 
 export const Card = () => {
   const forecastTodayQuery = useForecasts().forecastsTodayQuery;
 
   console.log(forecastTodayQuery.data);
-  
 
   if (forecastTodayQuery.isLoading) {
     return <h1>Loading... </h1>;
@@ -22,7 +21,13 @@ export const Card = () => {
           <h2 className="text-lg">{forecast.city.name}</h2>
           <div className="flex-col">
             <h3>{forecast.weather}</h3>
-            <img className="w-20 m-auto" src={MostlyCloudySVG} alt="Cloudy" />
+            {weatherIcons[forecast.weather.toLowerCase()] && (
+              <img
+                className="w-20 m-auto"
+                src={weatherIcons[forecast.weather.toLowerCase()]}
+                alt={forecast.weather}
+              />
+            )}
           </div>
           <div className="flex gap-4 items-center justify-center bg-card/50  rounded-lg py-5 ">
             <WiThermometer className="text-red-700 text-2xl" />
