@@ -15,7 +15,7 @@ export class CitiesService {
       const cities = await this.cityRepository.find();
       return cities;
     } catch (error) {
-      console.log(`Error retrieving cities: ${error.message}`, error.stack);
+      console.log(`Error retrieving cities: ${error.message}`);
       throw error;
     }
   }

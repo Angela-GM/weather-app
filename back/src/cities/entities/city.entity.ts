@@ -1,5 +1,5 @@
-import { Climate } from 'src/climates/entities/climate.entity';
-import { Forecast } from 'src/forecasts/entities/forecast.entity';
+import { Climate } from '../../climates/entities/climate.entity';
+import { Forecast } from '../../forecasts/entities/forecast.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'cities' })

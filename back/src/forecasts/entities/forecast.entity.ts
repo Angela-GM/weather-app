@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Weather } from './forecasts.enums';
-import { City } from 'src/cities/entities/city.entity';
+import { City } from '../../cities/entities/city.entity';
 
 @Entity({ name: 'forecasts' })
 export class Forecast {

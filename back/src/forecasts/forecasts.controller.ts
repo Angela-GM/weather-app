@@ -35,7 +35,7 @@ export class ForecastsController {
   }
 
   @ApiOperation({
-    summary: 'Get weather forecast by cities',
+    summary: 'Get weather forecast by city',
     description: 'Get weather information by city id',
   })
   @Get('by-city/:city_id')
