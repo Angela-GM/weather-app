@@ -6,7 +6,7 @@ import { router } from './router/router.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <main className="dark text-foreground bg-background">
+    <main className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
           <RouterProvider router={router} />
     </main>
   </React.StrictMode>,
