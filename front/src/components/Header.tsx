@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   return (
     <header>
-        <p>Logo</p>
-        <input>Search city...</input>
+        <Link to={'/'} >Home</Link>
+        <Link to={'/map'}>Map</Link>
     </header>
   );
 }
