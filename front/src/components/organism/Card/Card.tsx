@@ -1,19 +1,22 @@
-import { useForecasts } from "../../../hooks/useForecasts";
 import { weatherIcons } from "./Cards.utils";
 import { DisplayTemperature } from "../../molecules/DisplayTemperature";
+import { Forecast } from "../../..";
+interface CardProps {
+  forecasts: Forecast[] | undefined; // Reemplaza YourForecastType con el tipo real de tus datos
+  isLoading: boolean;
+}
 
-export const Card = () => {
-  const forecastTodayQuery = useForecasts().forecastsTodayQuery;
-
-  console.log(forecastTodayQuery.data);
-
-  if (forecastTodayQuery.isLoading) {
+export const Card = ({ forecasts, isLoading }: CardProps)  => {
+  if (isLoading) {
     return <h1>Loading... </h1>;
   }
 
+ 
+
+  
   return (
     <>
-      {forecastTodayQuery.data?.map((forecast) => (
+      {forecasts?.map((forecast) => (
         <div
           key={forecast.id}
           className="w-3/4 md:w-3/6 m-auto rounded-lg p-5 border border-white/5 shadow-lg hover:border-white/50 cursor-pointer"
