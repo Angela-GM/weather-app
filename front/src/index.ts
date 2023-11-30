@@ -5,11 +5,11 @@ export type { Forecast, City } from "./interfaces/weatherInterfaces"
 
 
 // Components
-export { Header } from "./components/Header";
-export { SearchComponent } from "./components/SearchComponent";
-export { Card } from "./components/Card/Card";
+export { Header } from "./components/organism/Header";
+export { SearchComponent } from "./components/molecules/SearchComponent";
+export { Card } from "./components/organism/Card/Card";
 
 // Pages
-export { HomePage } from "./pages/HomePage";
-export { MapPage } from "./pages/MapPage";
+export { HomePage } from "./ui/pages/HomePage";
+export { MapPage } from "./ui/pages/MapPage";
 

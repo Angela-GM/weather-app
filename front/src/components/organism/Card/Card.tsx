@@ -1,6 +1,6 @@
-import { WiThermometer } from "react-icons/wi";
-import { useForecasts } from "../../hooks/useForecasts";
-import weatherIcons from "./Card.types";
+import { useForecasts } from "../../../hooks/useForecasts";
+import { weatherIcons } from "./Cards.utils";
+import { DisplayTemperature } from "../../molecules/DisplayTemperature";
 
 export const Card = () => {
   const forecastTodayQuery = useForecasts().forecastsTodayQuery;
@@ -29,11 +29,9 @@ export const Card = () => {
               />
             )}
           </div>
-          <div className="flex gap-4 items-center justify-center bg-card/50  rounded-lg py-5 ">
-            <WiThermometer className="text-red-700 text-2xl" />
-            <p>{forecast.min_temp}° min</p>
-            <p>{forecast.max_temp}° max</p>
-          </div>
+          
+          <DisplayTemperature temp_min={forecast.min_temp} temp_max={forecast.max_temp} />
+          
         </div>
       ))}
     </>

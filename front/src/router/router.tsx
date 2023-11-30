@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { WeatherLayout } from "../layout/WeatherLayout";
+import { WeatherLayout } from "../ui/layout/WeatherLayout";
 import { ErrorPage } from "../ErrorPage";
 import { HomePage, MapPage } from "..";
 

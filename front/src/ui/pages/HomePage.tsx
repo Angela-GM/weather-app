@@ -1,4 +1,4 @@
-import { Card, SearchComponent } from "..";
+import { Card, SearchComponent } from "../..";
 
 export const HomePage = () => {
   return (
