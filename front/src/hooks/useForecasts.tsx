@@ -9,7 +9,7 @@ const getForescastsAll = async () => {
 const getForecastsToday = async () => {
     const { data } = await weatherApi.get<Forecast[]>("/forecasts");
 
-    // const today = new Date().toISOString().split("T")[0];
+    // Today's fake date
     const today = "2022-09-11T22:00:00.000Z";
 
     const forecastsToday = data.filter((forecast) =>

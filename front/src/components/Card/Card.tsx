@@ -1,6 +1,6 @@
 import { WiThermometer } from "react-icons/wi";
 import { useForecasts } from "../../hooks/useForecasts";
-import weatherIcons from "./getWeatherIcon";
+import weatherIcons from "./Card.types";
 
 export const Card = () => {
   const forecastTodayQuery = useForecasts().forecastsTodayQuery;
