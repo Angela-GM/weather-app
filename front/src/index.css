@@ -11,6 +11,17 @@
 
 }
 
+/* Agrega este estilo a tu hoja de estilos */
+.overflow-hidden-scroll {
+  overflow: hidden;
+  scrollbar-width: thin; /* Para navegadores basados en Firefox */
+  -ms-overflow-style: none; /* Para navegadores basados en Internet Explorer y Edge */
+}
+
+.overflow-hidden-scroll::-webkit-scrollbar {
+  display: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+}
+
 
 
 

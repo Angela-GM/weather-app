@@ -1,6 +1,5 @@
-import { weatherIcons } from "./Cards.utils";
 import { DisplayTemperature } from "../../molecules/DisplayTemperature";
-import { Forecast } from "../../..";
+import { Forecast, weatherIcons } from "../../..";
 import { Link } from "react-router-dom";
 interface CardProps {
   forecasts: Forecast[] | undefined; 
