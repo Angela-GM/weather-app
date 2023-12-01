@@ -3,7 +3,7 @@
 export { weatherApi } from "./api/weatherApi";
 
 // Interfaces
-export type { Forecast, City, Climate } from "./interfaces/weatherInterfaces"
+export type { Forecast, City, Climate,ClimateData } from "./interfaces/weatherInterfaces"
 
 // Shared
 export { formattedDate } from "./shared/formattedDate";

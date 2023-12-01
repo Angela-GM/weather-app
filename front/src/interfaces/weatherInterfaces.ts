@@ -23,3 +23,17 @@ export interface City {
   lat: string;
   lon: string;
 }
+
+export interface ClimateData {
+  month: string;
+  min_temp: string;
+  max_temp: string;
+ }
+
+ export interface RainData {
+  month: string;
+  rain_days: string;
+  rain_fall: string;
+ }
+
+

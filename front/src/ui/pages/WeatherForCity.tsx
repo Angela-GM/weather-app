@@ -4,6 +4,8 @@ import { useForecasts } from "../../hooks/useForecasts";
 import { formattedDate } from "../../shared/formattedDate";
 import { DisplayTemperature } from "../../components/molecules/DisplayTemperature";
 import { weatherIcons } from "../..";
+import LineChart from "../../components/molecules/LineChart";
+import BarChart from "../../components/molecules/BarChart";
 
 export const WeatherForCity = () => {
   const { id } = useParams();
@@ -21,14 +23,14 @@ export const WeatherForCity = () => {
     (forecast) => forecast.city.id === cityId
   );
 
-  console.log(climateForCity);
+  console.log(climateForCity); //para los graficos
   console.log(forecastsForCity);
 
   return (
     <div className="flex-col gap-6">
       {forecastsForCity && forecastsForCity.length > 0 && (
         <div className="my-6">
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-3xl font-semibold">
             {forecastsForCity[0].city.name}
           </h2>
         </div>
@@ -37,9 +39,6 @@ export const WeatherForCity = () => {
       {/* weather of the week  */}
       {forecastsForCity && forecastsForCity.length > 0 && (
         <div className="flex-col gap-6">
-          <div className="flex gap-6">
-            <h3 className="text-xl text-left mb-6">Forecats:</h3>
-          </div>
           <div className="flex flex-nowrap gap-6 overflow-x-auto sm:overflow-x-auto md:overflow-hidden-scroll">
             {forecastsForCity.map((forecast) => (
               <div
@@ -61,6 +60,21 @@ export const WeatherForCity = () => {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Graficos */}
+
+      {climateForCity && climateForCity.length > 0 && (
+        <div className="flex-col gap-7 flex-wrap justify-center items-center">
+          <div className="w-6/8 md:w-3/5 m-auto mt-24">
+            <h3>Max/Min Temperature</h3>
+            <LineChart climateForCity={climateForCity} />
+          </div>
+          <div className="w-6/8 md:w-3/5 m-auto mt-24">
+            <h3>Rain statistics</h3>
+            <BarChart climateForCity={climateForCity} />
           </div>
         </div>
       )}

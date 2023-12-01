@@ -11,15 +11,35 @@
 
 }
 
-/* Agrega este estilo a tu hoja de estilos */
+
+  body {
+    height: 100vh;
+    background: linear-gradient(to right, #7aa9f5, #7eb4e7);
+   }
+
+   *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   }
+   
+   *::-webkit-scrollbar-track {
+    background: #f5f5f5; 
+   }
+   
+   *::-webkit-scrollbar-thumb {
+    background: #507fac; 
+   }
+   
+
+
 .overflow-hidden-scroll {
   overflow: hidden;
-  scrollbar-width: thin; /* Para navegadores basados en Firefox */
-  -ms-overflow-style: none; /* Para navegadores basados en Internet Explorer y Edge */
+  scrollbar-width: thin;
+  -ms-overflow-style: none; 
 }
 
 .overflow-hidden-scroll::-webkit-scrollbar {
-  display: none; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+  display: none; 
 }
 
 
