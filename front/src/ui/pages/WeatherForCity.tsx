@@ -64,7 +64,7 @@ export const WeatherForCity = () => {
         </div>
       )}
 
-      {/* Graficos */}
+      {/* Charts */}
 
       {climateForCity && climateForCity.length > 0 && (
         <div className="flex-col gap-7 flex-wrap justify-center items-center">

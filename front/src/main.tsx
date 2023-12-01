@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
@@ -9,12 +8,12 @@ import { ReactQueryDevtools } from "react-query/devtools";
 const client = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+
     <QueryClientProvider client={client}>
       <main>
         <ReactQueryDevtools />
         <RouterProvider router={router} />
       </main>
     </QueryClientProvider>
-  </React.StrictMode>
+
 );
