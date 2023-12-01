@@ -1,8 +1,9 @@
 import { weatherIcons } from "./Cards.utils";
 import { DisplayTemperature } from "../../molecules/DisplayTemperature";
 import { Forecast } from "../../..";
+import { Link } from "react-router-dom";
 interface CardProps {
-  forecasts: Forecast[] | undefined; // Reemplaza YourForecastType con el tipo real de tus datos
+  forecasts: Forecast[] | undefined; 
   isLoading: boolean;
 }
 
@@ -17,9 +18,10 @@ export const Card = ({ forecasts, isLoading }: CardProps)  => {
   return (
     <>
       {forecasts?.map((forecast) => (
+        <Link className="w-3/4 md:w-3/6 m-auto rounded-lg p-5 border border-white/5 shadow-lg hover:border-white/50 cursor-pointer" key={forecast.id} to={`/${forecast.city.id}`}>
         <div
-          key={forecast.id}
-          className="w-3/4 md:w-3/6 m-auto rounded-lg p-5 border border-white/5 shadow-lg hover:border-white/50 cursor-pointer"
+          
+          
         >
           <h2 className="text-lg">{forecast.city.name}</h2>
           <div className="flex-col">
@@ -36,6 +38,7 @@ export const Card = ({ forecasts, isLoading }: CardProps)  => {
           <DisplayTemperature temp_min={forecast.min_temp} temp_max={forecast.max_temp} />
           
         </div>
+        </Link>
       ))}
     </>
   );

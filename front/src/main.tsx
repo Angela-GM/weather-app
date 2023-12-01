@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={client}>
     
-      <main className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
+      <main className=" bg-gradient-to-r from-cyan-500 to-blue-500">
       <ReactQueryDevtools />
         <RouterProvider router={router} />
       </main>

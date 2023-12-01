@@ -1,7 +1,8 @@
 // Services
 export { weatherApi } from "./api/weatherApi";
 
-export type { Forecast, City } from "./interfaces/weatherInterfaces"
+export type { Forecast, City, Climate } from "./interfaces/weatherInterfaces"
+
 
 
 // Components

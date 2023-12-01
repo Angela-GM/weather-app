@@ -17,10 +17,11 @@ export const HomePage = () => {
  );
 
   return (
-    <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div>
       <SearchComponent placeholder="Search city..." onSearch={handleSearch} value={searchTerm}  />
 
       <div className="flex gap-6 flex-wrap">
+
         <Card forecasts={filteredForecasts} isLoading={forecastTodayQuery.isLoading}  />
       </div>
     </div>

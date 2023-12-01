@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { WeatherLayout } from "../ui/layout/WeatherLayout";
 import { ErrorPage } from "../ErrorPage";
 import { HomePage, MapPage } from "..";
+import { WeatherForCity } from "../ui/pages/WeatherForCity";
 
 
 export const router = createBrowserRouter([
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
         {
           path: "",
           element: <HomePage />
+        },
+        {
+          path: "/:id",
+          element: <WeatherForCity />
         },
         {
           path: "map",
