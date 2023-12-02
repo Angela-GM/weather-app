@@ -31,16 +31,4 @@ describe('CitiesController', () => {
       expect(mockCityRepository.find).toHaveBeenCalled();
     });
   });
-
-  // describe('findOneById', () => {
-  //   it('should return a single city by ID', async () => {
-  //     const id = 1;
-  //     mockCityRepository.findOneById.mockResolvedValue(city);
-
-  //     const result = await controller.findOne(id);
-
-  //     expect(result).toEqual(city);
-  //     expect(mockCityRepository.findOneById).toHaveBeenCalledWith(id);
-  //   });
-  // });
 });

@@ -18,6 +18,7 @@ describe('CitiesService', () => {
         },
       ],
     }).compile();
+
     service = module.get<CitiesService>(CitiesService);
   });
 
