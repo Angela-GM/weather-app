@@ -4,15 +4,16 @@
 
 Weather App is a web application that provides weather information for different cities.
 
-
 # Technologies Used
 
 - **Backend:**
+
   - [NestJS](https://nestjs.com/) - A progressive Node.js framework for building efficient and scalable server-side applications.
   - [TypeORM](https://typeorm.io/) - An ORM that can run in NodeJS and other JavaScript runtimes.
   - [MySQL](https://www.mysql.com/) - An open-source relational database management system.
 
 - **Frontend:**
+
   - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
   - [React Query](https://react-query.tanstack.com/) - A library for managing, caching, and updating server state in React applications.
   - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
@@ -24,6 +25,7 @@ Weather App is a web application that provides weather information for different
   - [Vite](https://vitejs.dev/) - A fast web development build tool.
 
 - **Development Tools:**
+
   - [Visual Studio Code](https://code.visualstudio.com/) - A lightweight but powerful source code editor.
   - [Docker](https://www.docker.com/) - A platform for developing, shipping, and running applications in containers.
   - [Postman](https://www.postman.com/) - A collaboration platform for API development.
@@ -31,19 +33,24 @@ Weather App is a web application that provides weather information for different
   - [Swagger](https://swagger.io/) - An API documentation tool.
 
 - **Other Libraries and Utilities:**
+
   - [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript that adds static types.
   - [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) - An API for embedding Google Maps into web pages.
   - [Freepik Icons](https://www.freepik.com/) - Free icons for your project.
-  
 
-## Prerequisites
+  ## Screenshots
 
-Before getting started, make sure you have the following software installed on your machine:
+| Home Page                                                                                                        | Home Page (Responsive)                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| ![Home Page](https://res.cloudinary.com/drjyg98uv/image/upload/v1701544183/weather-app/ay6njxahil0rimthzfjh.png) | ![Home Page (Responsive)](https://res.cloudinary.com/drjyg98uv/image/upload/v1701544183/weather-app/tnuvswb16p1cqo8qy4qf.png) |
 
-- [Docker](https://www.docker.com/get-started)
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+| City Forecasts                                                                                                        | Statistics                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| ![City Forecasts](https://res.cloudinary.com/drjyg98uv/image/upload/v1701544183/weather-app/bwrhwhzagflpzo22kdtn.png) | ![Statistics](https://res.cloudinary.com/drjyg98uv/image/upload/v1701544183/weather-app/s2kfhbjdsinlmw15ffcg.png) |
 
+| Today's Weather Map                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------- |
+| ![Today's Weather Map](https://res.cloudinary.com/drjyg98uv/image/upload/v1701544183/weather-app/tbqguoveo6lhwwk0vfvo.png) |
 
 ## Prerequisites
 
