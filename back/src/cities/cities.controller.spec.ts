@@ -26,7 +26,6 @@ describe('CitiesController', () => {
       mockCityRepository.find.mockResolvedValue(cities);
 
       const result = await controller.findAll();
-      console.log(result);
 
       expect(result).toEqual(cities);
       expect(mockCityRepository.find).toHaveBeenCalled();
@@ -39,7 +38,6 @@ describe('CitiesController', () => {
   //     mockCityRepository.findOneById.mockResolvedValue(city);
 
   //     const result = await controller.findOne(id);
-  //     console.log(result);
 
   //     expect(result).toEqual(city);
   //     expect(mockCityRepository.findOneById).toHaveBeenCalledWith(id);

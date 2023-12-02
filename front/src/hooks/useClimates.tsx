@@ -2,9 +2,7 @@ import { useQuery } from "react-query";
 import { Climate, weatherApi } from ".."
 
 const getClimatesAll = async () => {
-    const { data } = await weatherApi.get<Climate[]>('/climates');
-    console.log(data);
-    
+    const { data } = await weatherApi.get<Climate[]>('/climates');  
     return data;
 }
 

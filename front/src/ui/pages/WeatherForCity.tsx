@@ -23,8 +23,7 @@ export const WeatherForCity = () => {
     (forecast) => forecast.city.id === cityId
   );
 
-  console.log(climateForCity); //para los graficos
-  console.log(forecastsForCity);
+
 
   return (
     <div className="flex-col gap-6">

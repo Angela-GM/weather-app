@@ -4,7 +4,6 @@ import { useForecasts } from "../../hooks/useForecasts";
 
 export const HomePage = () => {
   const forecastTodayQuery = useForecasts().forecastsTodayQuery;
-  console.log(forecastTodayQuery.data);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {

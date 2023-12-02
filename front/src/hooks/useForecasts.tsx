@@ -2,16 +2,12 @@ import { Forecast, weatherApi } from "..";
 import { useQuery } from "react-query";
 
 const getForescastsAll = async () => {
-    const { data } = await weatherApi.get<Forecast[]>(`/forecasts`);
-    console.log(data);
-    
+    const { data } = await weatherApi.get<Forecast[]>(`/forecasts`);    
     return data;
 }
 
 const getForecastsToday = async () => {
-    const { data } = await weatherApi.get<Forecast[]>("/forecasts");
-    console.log(data);
-    
+    const { data } = await weatherApi.get<Forecast[]>("/forecasts");   
 
     // Today's fake date
     // const fakeToday = "2022-09-12T00:00:00.000Z";
