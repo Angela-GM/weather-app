@@ -3,17 +3,23 @@ import { useQuery } from "react-query";
 
 const getForescastsAll = async () => {
     const { data } = await weatherApi.get<Forecast[]>(`/forecasts`);
+    console.log(data);
+    
     return data;
 }
 
 const getForecastsToday = async () => {
     const { data } = await weatherApi.get<Forecast[]>("/forecasts");
+    console.log(data);
+    
 
     // Today's fake date
-    const today = "2022-09-11T22:00:00.000Z";
+    // const fakeToday = "2022-09-12T00:00:00.000Z";
+    const fakeToday = data[0].date;
+
 
     const forecastsToday = data.filter((forecast) =>
-    forecast.date.includes(today)
+    forecast.date.includes(fakeToday)
   );
 
   return forecastsToday;

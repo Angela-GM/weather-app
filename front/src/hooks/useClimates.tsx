@@ -3,6 +3,8 @@ import { Climate, weatherApi } from ".."
 
 const getClimatesAll = async () => {
     const { data } = await weatherApi.get<Climate[]>('/climates');
+    console.log(data);
+    
     return data;
 }
 
