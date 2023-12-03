@@ -1,4 +1,3 @@
-
 // Services
 export { weatherApi } from "./api/weatherApi";
 
@@ -8,7 +7,7 @@ export type { Forecast, City, Climate,ClimateData } from "./interfaces/weatherIn
 // Shared
 export { formattedDate } from "./shared/formattedDate";
 export { weatherIcons } from "./shared/weatherIcons";
-
+export { getMonthName } from "./shared/getMonthName"
 
 
 
@@ -20,4 +19,4 @@ export { Card } from "./components/organism/Card/Card";
 // Pages
 export { HomePage } from "./ui/pages/HomePage";
 export { MapPage } from "./ui/pages/MapPage";
-
+export { WeatherByCity } from "./ui/pages/WeatherByCity";

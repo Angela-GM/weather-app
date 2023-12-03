@@ -7,7 +7,7 @@ import { weatherIcons } from "../..";
 import LineChart from "../../components/molecules/LineChart";
 import BarChart from "../../components/molecules/BarChart";
 
-export const WeatherForCity = () => {
+export const WeatherByCity = () => {
   const { id } = useParams();
 
   const cityId = parseInt(id ?? "0", 10);

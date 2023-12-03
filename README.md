@@ -1,3 +1,22 @@
+# Index
+
+1. [Overview](#overview)
+2. [Technologies Used](#technologies-used)
+3. [Testing](#testing)
+   - [Backend Tests (Jest)](#backend-tests-jest)
+   - [Frontend Tests (Vitest)](#frontend-tests-vitest)
+   - [Test Results and Screenshots](#test-results-and-screenshots)
+4. [Screenshots](#screenshots)
+5. [Prerequisites](#prerequisites)
+6. [Getting Started](#getting-started)
+   - [Clone the Repository](#clone-the-repository)
+   - [Set up the Backend](#set-up-the-backend)
+   - [Set up the Frontend](#set-up-the-frontend)
+7. [Usage](#usage)
+8. [Author](#author)
+
+
+
 # Weather App
 
 ## Overview
@@ -11,6 +30,7 @@ Weather App is a web application that provides weather information for different
   - [NestJS](https://nestjs.com/) - A progressive Node.js framework for building efficient and scalable server-side applications.
   - [TypeORM](https://typeorm.io/) - An ORM that can run in NodeJS and other JavaScript runtimes.
   - [MySQL](https://www.mysql.com/) - An open-source relational database management system.
+  - [Jest](https://jestjs.io/) - A JavaScript testing framework.
 
 - **Frontend:**
 
@@ -23,6 +43,8 @@ Weather App is a web application that provides weather information for different
   - [Axios](https://axios-http.com/) - A promise-based HTTP client for the browser and Node.js.
   - [React Icons](https://react-icons.github.io/react-icons/) - A collection of iconic React icons.
   - [Vite](https://vitejs.dev/) - A fast web development build tool.
+  - [Vitest](https://vitejs.dev/) - A next-generation frontend testing framework.
+
 
 - **Development Tools:**
 
@@ -37,6 +59,29 @@ Weather App is a web application that provides weather information for different
   - [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript that adds static types.
   - [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) - An API for embedding Google Maps into web pages.
   - [Freepik Icons](https://www.freepik.com/) - Free icons for your project.
+
+# Testing
+
+## Backend Tests (Jest)
+
+To run backend tests, navigate to the `back` directory and execute the following command:
+
+```bash
+cd back
+npm run test
+```
+![Result](https://res.cloudinary.com/drjyg98uv/image/upload/v1701599389/weather-app/wjyducgc6cwolgrotgpi.png)
+
+
+## Frontend Tests (Vitest)
+
+To run frontend tests, navigate to the `front` directory and execute the following command:
+
+```bash
+cd front
+npm run test
+```
+![Result](https://res.cloudinary.com/drjyg98uv/image/upload/v1701599390/weather-app/vxxwi23h8gch93lxum91.png)
 
   ## Screenshots
 
@@ -108,3 +153,7 @@ The app will be accessible at http://localhost:5173/
 
 Access the Swagger API documentation: http://localhost:3000/docs<br>
 Explore the React app: http://localhost:5173/
+
+## Author
+
+[<img src="https://avatars.githubusercontent.com/u/116819605?s=400&u=bae5f7e88a358d3fbbd2f0e8521dda9a57739c70&v=4" width=115><br><sub>Angela Garcia</sub>](https://github.com/Angela-GM)  
