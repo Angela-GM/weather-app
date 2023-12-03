@@ -15,15 +15,12 @@ export const WeatherByCity = () => {
   const climatesQuery = useClimates().data;
   const forecastsQuery = useForecasts().forecastsAllQuery.data;
 
-  //   Filter for city
   const climateForCity = climatesQuery?.filter(
     (climate) => climate.city.id === cityId
   );
   const forecastsForCity = forecastsQuery?.filter(
     (forecast) => forecast.city.id === cityId
   );
-
-
 
   return (
     <div className="flex-col gap-6">
@@ -35,7 +32,6 @@ export const WeatherByCity = () => {
         </div>
       )}
 
-      {/* weather of the week  */}
       {forecastsForCity && forecastsForCity.length > 0 && (
         <div className="flex-col gap-6">
           <div className="flex flex-nowrap gap-6 overflow-x-auto sm:overflow-x-auto md:overflow-hidden-scroll">
@@ -62,8 +58,6 @@ export const WeatherByCity = () => {
           </div>
         </div>
       )}
-
-      {/* Charts */}
 
       {climateForCity && climateForCity.length > 0 && (
         <div className="flex-col gap-7 flex-wrap justify-center items-center">

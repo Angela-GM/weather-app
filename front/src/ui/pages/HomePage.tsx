@@ -8,20 +8,25 @@ export const HomePage = () => {
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
-    console.log(`Searching for: ${event.target.value}`);
   };
 
- const filteredForecasts = forecastTodayQuery.data?.filter(forecast =>
-  forecast.city.name.toLowerCase().includes(searchTerm.toLowerCase())
- );
+  const filteredForecasts = forecastTodayQuery.data?.filter((forecast) =>
+    forecast.city.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
-      <SearchComponent placeholder="Search city..." onSearch={handleSearch} value={searchTerm}  />
+      <SearchComponent
+        placeholder="Search city..."
+        onSearch={handleSearch}
+        value={searchTerm}
+      />
 
       <div className="flex gap-6 flex-wrap">
-
-        <Card forecasts={filteredForecasts} isLoading={forecastTodayQuery.isLoading}  />
+        <Card
+          forecasts={filteredForecasts}
+          isLoading={forecastTodayQuery.isLoading}
+        />
       </div>
     </div>
   );
