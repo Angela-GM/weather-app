@@ -120,6 +120,7 @@ cd weather-app
 
 ```bash
 cd back
+npm install
 docker-compose build
 ```
 
@@ -144,7 +145,7 @@ npm install
 #### b. Start the React App
 
 ```bash
-npm run start dev
+npm run dev
 ```
 
 The app will be accessible at http://localhost:5173/

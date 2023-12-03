@@ -17,6 +17,7 @@ const getForecastsToday = async () => {
     const forecastsToday = data.filter((forecast) =>
     forecast.date.includes(fakeToday)
   );
+console.log(forecastsToday);
 
   return forecastsToday;
 
